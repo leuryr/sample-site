@@ -1,0 +1,26 @@
+body {
+    background: url("img/background.jpg");
+    background-size: cover;
+    margin: 0;
+}
+
+nav {
+    background-color: rgb(36, 35, 35);
+    width: 100%;
+    padding: 20px 0 20px 0;
+    color: white;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+}
+li {
+    display: inline;
+    padding-right: 40px;
+}
+li: last-of-type {
+    padding-right: none;
+}
+li:hover {
+    cursor: pointer;
+}
