@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Caledo';
+    src: url('../fonts/caledo_light.woff');
+}
+@font-face {
+    font-family: 'Dickens-Bold';
+    src: url('../fonts/Dickens-Bold.ttf.woff');
+}
 html {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -10,14 +18,21 @@ body {
     color: white;
     width: 100%;
 }
-nav {
-    width: 100%;
+.nav-start {
     padding-bottom: 20px;
-    text-align: left;
-    position: absolute;
+    text-align: right;
     height: 40px;
     font-size: 1.5rem;
+    color: white;
     /*box-shadow: 0px 0px 30px #1a1a1a;*/
+}
+header {
+    width: 100%;
+    background-color: rgb(36, 35, 35);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
 }
 main {
     width: 100%;
@@ -28,29 +43,29 @@ section {
 }
 ul {
     list-style-type: none;
+    padding: 0px;
 }
 li {
     display: inline;
     padding-right: 40px;
-}
-li: last-of-type {
-    padding-right: none;
+    font-family: 'Dickens-Bold';
+    font-size: 1.2em;
+    letter-spacing: 1px;
 }
 li>a:hover {
     color: rgba(231,198,145,.87);
 }
 a {
-    color: white;
+    color: inherit;
     text-decoration: none;
 }
 #home-top {
     width: 100%;
-    min-height: 100vh;
-    background-image: url("../img/tps_cover.jpg");
+    background-color: rgb(36, 35, 35);
+    /*background-image: url('../img/tps_cover.jpg');
     background-size: cover;
     background-position: center top;
-    background-repeat: no-repeat;
-    box-shadow: inset 0 0 0 100vh rgba(66,56,40,.37);
+    background-repeat: no-repeat;*/
 }
 #about {
     min-height: 200px;
@@ -70,6 +85,10 @@ a {
 #contact {
     min-height: 200px;
     background-color: rgb(36, 35, 35);
+}
+.active-link {
+    color: rgba(231,198,145,.87);
+    border-bottom: 3px solid rgba(176,148,104,.52);
 }
 .center-text {
     text-align: center;
@@ -104,6 +123,26 @@ a {
 .email-text:hover {
     text-decoration: underline;
 }
+.header-title {
+    font-family: 'Caledo', sans-serif;
+    font-size: 2.3em;
+    margin: 15px 0;
+    margin-left: 10px;
+    letter-spacing: 7px;
+    text-align: left;
+    color: white;
+}
+.hero-image {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+iframe {
+    width: 70%;
+    height: 39vw;
+    display: block;
+    margin: 0 auto;
+}
 .section-header {
     text-align: center;
     font-size: 2.5rem;
@@ -127,4 +166,62 @@ a {
     font-weight: 300;
     padding: 32px;
     line-height: 1.5em;
+}
+@media only screen and (max-width: 1055px) {
+    header {
+        justify-content: center;
+    }
+    .hero-image {
+        width: 100%;
+    }
+    li:last-of-type {
+        padding-right: 0;
+    }
+}
+@media only screen and (max-width: 830px) {
+    .content-block {
+        position: static;
+        width: 100%;
+    }
+    .content-title {
+        position: inherit;
+        margin-bottom: 0;
+        font-size: 2rem;
+    }
+    .section-header {
+        font-size: 2rem;
+    }
+    .text-format {
+        padding: 52px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .nav-start {
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width: 515px) {
+    body {
+        font-size: 1.1em;
+    }
+    .content-title {
+        font-size: 1.6rem;
+    }
+    .nav-start {
+        font-size: .9rem;
+    }
+    .header-title {
+        font-size: 2rem;
+    }
+    .section-header {
+        font-size: 1.6rem;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .nav-start {
+        font-size: .5rem;
+    }
+    .header-title {
+        font-size: 1.2rem;
+    }
 }
